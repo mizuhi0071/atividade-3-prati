@@ -1,0 +1,131 @@
+
+/* Estilo básico */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header, Main, Footer */
+header, main, footer {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid #333;
+}
+
+header {
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+main {
+  background-color: #fff8dc;
+  color: #444;
+}
+
+footer {
+  background-color: #eee;
+  color: #666;
+}
+
+/* h2 estilizado */
+h2 {
+  font-size: 1.5em;
+  text-decoration: underline;
+}
+
+/* Classe destaque */
+.destaque {
+  font-style: italic;
+  background-color: #f9f9f9;
+}
+
+/* ID importante */
+#importante {
+  border-top: 5px solid red;
+}
+
+
+.galeria-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+figure {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*hamburger menu*/
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+}
+
+/* Menu responsivo */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    padding: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
